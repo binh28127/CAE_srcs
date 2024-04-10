@@ -1,32 +1,98 @@
 [*]
 [*] GTKWave Analyzer v3.3.104 (w)1999-2020 BSI
-[*] Thu Mar 28 10:29:52 2024
+[*] Tue Apr  9 20:28:39 2024
 [*]
 [dumpfile] "/media/binh/ShareData/Tu/template/wave.fst"
-[dumpfile_mtime] "Thu Mar 28 10:29:43 2024"
-[dumpfile_size] 614
+[dumpfile_mtime] "Tue Apr  9 20:26:47 2024"
+[dumpfile_size] 60948
 [savefile] "/media/binh/ShareData/Tu/template/wave.gtkw"
 [timestart] 0
-[size] 1000 600
-[pos] 101 118
-*-5.982025 44 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[size] 1864 1016
+[pos] 56 27
+*-4.982025 135 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
 [treeopen] TOP.
 [treeopen] TOP.top.
+[treeopen] TOP.top.cae_0.
 [sst_width] 233
-[signals_width] 78
+[signals_width] 248
 [sst_expanded] 1
-[sst_vpaned_height] 144
+[sst_vpaned_height] 328
 @28
-TOP.top.test.binh
-@22
-TOP.top.test.a[3:0]
+TOP.top.cae_0.clk
+[color] 1
+TOP.top.cae_0.rst
+[color] 1
+TOP.top.cae_0.en
+@100000028
+TOP.top.cae_0.layer[31:0]
+TOP.top.cae_0.pe_0.state[1:0]
+@24
+TOP.top.cae_0.pe_0.data[0][7:0]
+TOP.top.cae_0.pe_0.data[1][7:0]
+TOP.top.cae_0.pe_0.data[2][7:0]
+[color] 5
+TOP.top.cae_0.pe_0.weight[0][7:0]
+[color] 5
+TOP.top.cae_0.pe_0.weight[1][7:0]
+[color] 5
+TOP.top.cae_0.pe_0.weight[2][7:0]
+TOP.top.cae_0.pe_1.data[0][7:0]
+TOP.top.cae_0.pe_1.data[1][7:0]
+TOP.top.cae_0.pe_1.data[2][7:0]
+[color] 5
+TOP.top.cae_0.pe_0.weight[0][7:0]
+[color] 5
+TOP.top.cae_0.pe_0.weight[1][7:0]
+[color] 5
+TOP.top.cae_0.pe_0.weight[2][7:0]
+TOP.top.cae_0.pe_2.data[0][7:0]
+TOP.top.cae_0.pe_2.data[1][7:0]
+TOP.top.cae_0.pe_2.data[2][7:0]
+@25
+[color] 5
+TOP.top.cae_0.pe_0.weight[0][7:0]
+[color] 5
+TOP.top.cae_0.pe_0.weight[1][7:0]
+[color] 5
+TOP.top.cae_0.pe_0.weight[2][7:0]
+@420
+[color] 2
+TOP.top.cae_0.inter_buffer_0[0][17:0]
+[color] 2
+TOP.top.cae_0.inter_buffer_0[1][17:0]
+[color] 2
+TOP.top.cae_0.inter_buffer_0[2][17:0]
 @28
-TOP.top.test.abc
-@22
-TOP.top.test.b[3:0]
+TOP.top.cae_0.flag_pe[2:0]
+[color] 3
+TOP.top.cae_0.done_pe[2:0]
+@420
+TOP.top.cae_0.bias_in[31:0]
+TOP.top.cae_0.acc_0.psum[0][17:0]
+TOP.top.cae_0.acc_0.psum[1][17:0]
+TOP.top.cae_0.acc_0.psum[2][17:0]
+TOP.top.cae_0.acc_0.tsum[31:0]
 @28
-TOP.top.test.binh
+[color] 1
+TOP.top.cae_0.en_acc
+@420
+TOP.top.cae_0.acc_0.sum[31:0]
+@28
+[color] 3
+TOP.top.cae_0.done_acc
+@24
+TOP.top.cae_0.counter_accw[4:0]
+@420
+[color] 2
+TOP.top.cae_0.inter_buffer_1[31:0]
+@28
+[color] 1
+TOP.top.cae_0.rst_ews
+TOP.top.cae_0.done_ews
 @22
-TOP.top.test.c[4:0]
+TOP.top.cae_0.ewise_0.din[31:0]
+TOP.top.cae_0.ewise_0.qdata[7:0]
+TOP.top.cae_0.ewise_0.redata[7:0]
+TOP.top.cae_0.current_max[7:0]
 [pattern_trace] 1
 [pattern_trace] 0

@@ -14,11 +14,11 @@ Vtop::Vtop(VerilatedContext* _vcontextp__, const char* _vcname__)
     , clk_i{vlSymsp->TOP.clk_i}
     , rst{vlSymsp->TOP.rst}
     , en{vlSymsp->TOP.en}
+    , layer{vlSymsp->TOP.layer}
+    , bias_in{vlSymsp->TOP.bias_in}
     , data_in{vlSymsp->TOP.data_in}
     , weight_in{vlSymsp->TOP.weight_in}
-    , done{vlSymsp->TOP.done}
-    , psum_in{vlSymsp->TOP.psum_in}
-    , psum_out{vlSymsp->TOP.psum_out}
+    , data_out{vlSymsp->TOP.data_out}
     , rootp{&(vlSymsp->TOP)}
 {
     // Register model with the context

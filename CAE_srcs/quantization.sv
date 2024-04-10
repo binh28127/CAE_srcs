@@ -1,13 +1,17 @@
+/* verilator lint_off UNUSEDSIGNAL */
+/* verilator lint_off UNDRIVEN */
+
 `timescale 1ns / 1ps
 
-import parameters::*;
+//import parameters::*;
+`include "parameters.sv"
 
 module quantization (
-    input [DATA_WIDTH*2-1:0] din,
-    output reg [DATA_WIDTH-1:0] dout
+    input logic [`BIAS_WIDTH-1:0] din,
+    output logic [`DATA_WIDTH-1:0] dout
 );
 
-    assign dout = (&din[15:8]) ? 8'hFF : (din[15:8] + din[7]);
+    assign dout = (&din[19:12]) ? 8'hFF : (din[19:12] + {7'b0,din[11]});
  
 endmodule
 
@@ -19,3 +23,6 @@ endmodule
 //    assign dout = din[27:12];
 
 //endmodule
+
+/* verilator lint_off UNUSEDSIGNAL */
+/* verilator lint_off UNDRIVEN */
