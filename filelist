@@ -1,0 +1,7 @@
+src/CAE_top.v
+src/accumulate.v
+src/negedge_detect.v
+src/parameters.v
+src/pe.v
+src/posedge_detect.v
+src/vector_mult.v
