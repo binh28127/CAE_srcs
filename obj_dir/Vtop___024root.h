@@ -19,6 +19,7 @@ class Vtop___024root final : public VerilatedModule {
         VL_IN8(rst,0,0);
         VL_IN8(enable,0,0);
         VL_IN8(layer,0,0);
+        VL_IN8(fc_wcol,4,0);
         VL_INW(data_row1_in,223,0,7);
         VL_INW(data_row2_in,223,0,7);
         VL_INW(data_row3_in,223,0,7);
@@ -78,9 +79,9 @@ class Vtop___024root final : public VerilatedModule {
         CData/*1:0*/ top__DOT__cae_0__DOT__acc_0__DOT__state;
         CData/*0:0*/ top__DOT__cae_0__DOT__acc_0__DOT__posedge_detect_enable__DOT__signalPrev;
         CData/*0:0*/ top__DOT__cae_0__DOT__acc_0__DOT__negedge_detect__DOT__signalPrev;
-        CData/*0:0*/ __Vclklast__TOP__clk_i;
     };
     struct {
+        CData/*0:0*/ __Vclklast__TOP__clk_i;
         VL_IN(bias_in,31,0);
         VL_OUT(sum,31,0);
         QData/*53:0*/ top__DOT__cae_0__DOT____Vcellinp__acc_0__psum;

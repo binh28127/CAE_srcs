@@ -15,6 +15,7 @@ Vtop::Vtop(VerilatedContext* _vcontextp__, const char* _vcname__)
     , rst{vlSymsp->TOP.rst}
     , enable{vlSymsp->TOP.enable}
     , layer{vlSymsp->TOP.layer}
+    , fc_wcol{vlSymsp->TOP.fc_wcol}
     , data_row1_in{vlSymsp->TOP.data_row1_in}
     , data_row2_in{vlSymsp->TOP.data_row2_in}
     , data_row3_in{vlSymsp->TOP.data_row3_in}

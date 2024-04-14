@@ -29,6 +29,7 @@ class Vtop VL_NOT_FINAL : public VerilatedModel {
     VL_IN8(&rst,0,0);
     VL_IN8(&enable,0,0);
     VL_IN8(&layer,0,0);
+    VL_IN8(&fc_wcol,4,0);
     VL_INW(&data_row1_in,223,0,7);
     VL_INW(&data_row2_in,223,0,7);
     VL_INW(&data_row3_in,223,0,7);

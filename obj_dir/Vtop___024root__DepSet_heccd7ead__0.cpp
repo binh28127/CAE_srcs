@@ -306,7 +306,8 @@ VL_INLINE_OPT void Vtop___024root___sequent__TOP__0(Vtop___024root* vlSelf) {
                 }
             } else {
                 if (vlSelf->top__DOT__cae_0__DOT__acc_0__DOT__fc_comp) {
-                    if ((0x19U >= (IData)(vlSelf->top__DOT__cae_0__DOT__acc_0__DOT__counter))) {
+                    if (((IData)(vlSelf->top__DOT__cae_0__DOT__acc_0__DOT__counter) 
+                         <= (IData)(vlSelf->fc_wcol))) {
                         __Vdly__top__DOT__cae_0__DOT__acc_0__DOT__tsum 
                             = (((vlSelf->top__DOT__cae_0__DOT__acc_0__DOT__tsum 
                                  + vlSelf->top__DOT__cae_0__DOT__acc_0__DOT__psum_buffer
@@ -325,7 +326,8 @@ VL_INLINE_OPT void Vtop___024root___sequent__TOP__0(Vtop___024root* vlSelf) {
                     }
                 }
                 if (((IData)(vlSelf->top__DOT__cae_0__DOT__acc_0__DOT__neg_fc_comp) 
-                     & (0x19U == (IData)(vlSelf->top__DOT__cae_0__DOT__acc_0__DOT__counter)))) {
+                     & ((IData)(vlSelf->top__DOT__cae_0__DOT__acc_0__DOT__counter) 
+                        == (IData)(vlSelf->fc_wcol)))) {
                     __Vdly__top__DOT__cae_0__DOT__acc_0__DOT__state = 3U;
                 }
             }
@@ -1694,5 +1696,7 @@ void Vtop___024root___eval_debug_assertions(Vtop___024root* vlSelf) {
         Verilated::overWidthError("enable");}
     if (VL_UNLIKELY((vlSelf->layer & 0xfeU))) {
         Verilated::overWidthError("layer");}
+    if (VL_UNLIKELY((vlSelf->fc_wcol & 0xe0U))) {
+        Verilated::overWidthError("fc_wcol");}
 }
 #endif  // VL_DEBUG

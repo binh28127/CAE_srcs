@@ -8,6 +8,7 @@ module accumulate(
     input layer,
     input [`WEIGHT_SIZE-1:0][`DATA_WIDTH*2+1:0] psum,
     input [`BIAS_WIDTH-1:0] bias,
+    input [`FC_WCOL_WIDTH-1:0] fc_wcol,
     output reg [`BIAS_WIDTH-1:0] sum,
     output reg conv_comp,
     output reg fc_done,
@@ -61,12 +62,12 @@ module accumulate(
                 end
                 FC: begin
                     if (fc_comp) begin
-                        if(counter <= 25) begin
+                        if(counter <= fc_wcol) begin
                             tsum <= tsum + {14'b0,psum_buffer[0]} + {14'b0,psum_buffer[1]} + {14'b0,psum_buffer[2]};
                             if(pos_enable && (counter == 0)) tsum <= tsum + {14'b0,psum_buffer[0]} + {14'b0,psum_buffer[1]} + {14'b0,psum_buffer[2]} + bias;
                         end                     
                     end
-                    if(neg_fc_comp && counter == 25) state <= DONE;
+                    if(neg_fc_comp && counter == fc_wcol) state <= DONE;
                 end
                 DONE: begin
                     conv_comp <= 0;

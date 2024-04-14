@@ -24,6 +24,7 @@ void set_random(Vtop *dut, vluint64_t sim_unit) {
     dut->bias_in = bias_in_array[0];
 
     dut->layer = 1;
+    dut->fc_wcol = 10;
 
     if (dut->layer == 0) {
         if(repeated_sim < 1) dut->rst = 0;

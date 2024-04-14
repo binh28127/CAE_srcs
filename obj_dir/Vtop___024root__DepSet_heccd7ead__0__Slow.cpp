@@ -211,6 +211,7 @@ VL_ATTR_COLD void Vtop___024root___ctor_var_reset(Vtop___024root* vlSelf) {
     vlSelf->rst = VL_RAND_RESET_I(1);
     vlSelf->enable = VL_RAND_RESET_I(1);
     vlSelf->layer = VL_RAND_RESET_I(1);
+    vlSelf->fc_wcol = VL_RAND_RESET_I(5);
     VL_RAND_RESET_W(224, vlSelf->data_row1_in);
     VL_RAND_RESET_W(224, vlSelf->data_row2_in);
     VL_RAND_RESET_W(224, vlSelf->data_row3_in);

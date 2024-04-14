@@ -6,6 +6,7 @@ module top (
     input rst, 
     input enable,
     input layer,
+    input [`FC_WCOL_WIDTH-1:0] fc_wcol,
     input [`INPUT_SIZE-1:0][`DATA_WIDTH-1:0] data_row1_in,
     input [`INPUT_SIZE-1:0][`DATA_WIDTH-1:0] data_row2_in,
     input [`INPUT_SIZE-1:0][`DATA_WIDTH-1:0] data_row3_in,

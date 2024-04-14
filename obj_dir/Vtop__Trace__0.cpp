@@ -317,17 +317,18 @@ void Vtop___024root__trace_chg_sub_0(Vtop___024root* vlSelf, VerilatedFst::Buffe
     bufp->chgBit(oldp+247,(vlSelf->rst));
     bufp->chgBit(oldp+248,(vlSelf->enable));
     bufp->chgBit(oldp+249,(vlSelf->layer));
-    bufp->chgWData(oldp+250,(vlSelf->data_row1_in),224);
-    bufp->chgWData(oldp+257,(vlSelf->data_row2_in),224);
-    bufp->chgWData(oldp+264,(vlSelf->data_row3_in),224);
-    bufp->chgWData(oldp+271,(vlSelf->weight_row1_in),224);
-    bufp->chgWData(oldp+278,(vlSelf->weight_row2_in),224);
-    bufp->chgWData(oldp+285,(vlSelf->weight_row3_in),224);
-    bufp->chgIData(oldp+292,(vlSelf->bias_in),32);
-    bufp->chgIData(oldp+293,(vlSelf->sum),32);
-    bufp->chgBit(oldp+294,(vlSelf->conv_comp));
-    bufp->chgBit(oldp+295,(vlSelf->fc_done));
-    bufp->chgBit(oldp+296,(vlSelf->fc_line_done));
+    bufp->chgCData(oldp+250,(vlSelf->fc_wcol),5);
+    bufp->chgWData(oldp+251,(vlSelf->data_row1_in),224);
+    bufp->chgWData(oldp+258,(vlSelf->data_row2_in),224);
+    bufp->chgWData(oldp+265,(vlSelf->data_row3_in),224);
+    bufp->chgWData(oldp+272,(vlSelf->weight_row1_in),224);
+    bufp->chgWData(oldp+279,(vlSelf->weight_row2_in),224);
+    bufp->chgWData(oldp+286,(vlSelf->weight_row3_in),224);
+    bufp->chgIData(oldp+293,(vlSelf->bias_in),32);
+    bufp->chgIData(oldp+294,(vlSelf->sum),32);
+    bufp->chgBit(oldp+295,(vlSelf->conv_comp));
+    bufp->chgBit(oldp+296,(vlSelf->fc_done));
+    bufp->chgBit(oldp+297,(vlSelf->fc_line_done));
 }
 
 void Vtop___024root__trace_cleanup(void* voidSelf, VerilatedFst* /*unused*/) {

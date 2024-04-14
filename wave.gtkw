@@ -1,15 +1,15 @@
 [*]
 [*] GTKWave Analyzer v3.4.0 (w)1999-2022 BSI
-[*] Sun Apr 14 08:28:30 2024
+[*] Sun Apr 14 13:43:15 2024
 [*]
 [dumpfile] "/home/tuduong/projects/Binhbo/wave.fst"
-[dumpfile_mtime] "Sun Apr 14 08:28:12 2024"
-[dumpfile_size] 285613
+[dumpfile_mtime] "Sun Apr 14 13:42:58 2024"
+[dumpfile_size] 285661
 [savefile] "/home/tuduong/projects/Binhbo/wave.gtkw"
-[timestart] 0
-[size] 1224 1000
+[timestart] 7702
+[size] 1240 1039
 [pos] 162 20
-*-5.700000 33 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+*-10.200000 9919 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
 [treeopen] TOP.
 [treeopen] TOP.top.
 [treeopen] TOP.top.cae_0.
@@ -17,7 +17,7 @@
 [signals_width] 214
 [sst_expanded] 1
 [sst_vpaned_height] 144
-@24
+@25
 TOP.top.cae_0.pe_0.enable
 TOP.top.cae_0.pe_0.flag_comp
 TOP.top.cae_0.pe_0.layer
@@ -26,12 +26,9 @@ TOP.top.cae_0.pe_0.counter[4:0]
 TOP.top.cae_0.pe_0.psum[17:0]
 TOP.top.cae_0.pe_1.psum[17:0]
 TOP.top.cae_0.pe_2.psum[17:0]
-@23
 TOP.top.cae_0.sum[31:0]
-@28
 TOP.top.cae_0.acc_0.fc_comp
 TOP.top.cae_0.acc_0.fc_done
-@22
 TOP.top.cae_0.acc_0.counter[4:0]
 [pattern_trace] 1
 [pattern_trace] 0
