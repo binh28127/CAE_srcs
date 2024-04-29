@@ -33,7 +33,7 @@ module pe (
         else psum =0;
     end
 
-    always @(posedge clk) begin
+    always @(posedge clk or posedge rst) begin
         if(rst) begin 
             state <= IDLE;
             flag_comp <= 0;

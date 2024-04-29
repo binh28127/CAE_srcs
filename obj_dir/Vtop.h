@@ -36,11 +36,12 @@ class Vtop VL_NOT_FINAL : public VerilatedModel {
     VL_INW(&weight_row1_in,223,0,7);
     VL_INW(&weight_row2_in,223,0,7);
     VL_INW(&weight_row3_in,223,0,7);
-    VL_OUT8(&conv_comp,0,0);
+    VL_OUTW(&conv_out,103,0,4);
+    VL_OUT8(&conv_done,0,0);
     VL_OUT8(&fc_done,0,0);
     VL_OUT8(&fc_line_done,0,0);
     VL_IN(&bias_in,31,0);
-    VL_OUT(&sum,31,0);
+    VL_OUT(&fc_out,31,0);
 
     // CELLS
     // Public to allow access to /* verilator public */ items.

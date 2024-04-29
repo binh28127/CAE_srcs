@@ -32,7 +32,7 @@ module accumulate(
     end
     assign fc_line_done = neg_fc_comp;
     
-    always @(posedge clk) begin
+    always @(posedge clk or posedge rst) begin
         {psum_buffer[2], psum_buffer[1], psum_buffer[0]} <= {psum[2], psum[1], psum[0]};
         if(layer) fc_comp <= enable;
         if (rst) begin
@@ -80,7 +80,7 @@ module accumulate(
         end
     end
 
-    always @(posedge clk) begin
+    always @(posedge clk or posedge rst) begin
         if(rst) begin
             counter <= 0;
         end else begin

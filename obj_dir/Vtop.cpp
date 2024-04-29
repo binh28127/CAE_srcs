@@ -22,11 +22,12 @@ Vtop::Vtop(VerilatedContext* _vcontextp__, const char* _vcname__)
     , weight_row1_in{vlSymsp->TOP.weight_row1_in}
     , weight_row2_in{vlSymsp->TOP.weight_row2_in}
     , weight_row3_in{vlSymsp->TOP.weight_row3_in}
-    , conv_comp{vlSymsp->TOP.conv_comp}
+    , conv_out{vlSymsp->TOP.conv_out}
+    , conv_done{vlSymsp->TOP.conv_done}
     , fc_done{vlSymsp->TOP.fc_done}
     , fc_line_done{vlSymsp->TOP.fc_line_done}
     , bias_in{vlSymsp->TOP.bias_in}
-    , sum{vlSymsp->TOP.sum}
+    , fc_out{vlSymsp->TOP.fc_out}
     , rootp{&(vlSymsp->TOP)}
 {
     // Register model with the context

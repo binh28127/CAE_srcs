@@ -15,8 +15,9 @@ module CAE_top (
     input [`INPUT_SIZE-1:0][`DATA_WIDTH-1:0] weight_row2_in,
     input [`INPUT_SIZE-1:0][`DATA_WIDTH-1:0] weight_row3_in,
     input [`BIAS_WIDTH-1:0] bias_in,
-    output [`BIAS_WIDTH-1:0] sum,
-    output conv_comp,
+    output [12:0][`DATA_WIDTH-1:0] conv_out,
+    output conv_done,
+    output [`BIAS_WIDTH-1:0] fc_out,
     output fc_done,
     output fc_line_done
 );
@@ -24,6 +25,9 @@ module CAE_top (
     wire [`DATA_WIDTH*2+1:0] inter_buffer_0 [2:0];
     wire [2:0] pe_comp;
     wire en_accumulate = &pe_comp;
+    wire conv_comp;
+    wire [`BIAS_WIDTH-1:0] sum;
+    assign fc_out = sum;
 
     pe pe_0 (
         .clk(clk), 
@@ -68,6 +72,15 @@ module CAE_top (
         .conv_comp(conv_comp),
         .fc_done(fc_done),
         .fc_line_done(fc_line_done)
+    );
+
+    element_wise element_wise (
+        .clk(clk),
+        .rst(rst),
+        .enable(conv_comp),
+        .din(sum),
+        .dout(conv_out),
+        .done(conv_done)
     );
 
 endmodule
